@@ -9,7 +9,7 @@
                 {{$message}}
                 @enderror
             </div>
-            <input type="text" name="name" placeholder="eg. Reaz" class="input-box">
+            <input type="text" name="name" placeholder="eg. Reaz" class="input-box" value="{{ old('name') }}">
         </div>
         <div class="error-message">
             @error('gender')
