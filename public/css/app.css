@@ -1,0 +1,164 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.logo {
+    width: 300px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+.order-section {
+    border: #053B50 2px solid;
+    display: flex;
+}
+.order-form {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+.input-box {
+    height: 50px;
+    outline: black;
+    border: #053B50 1px solid;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.input-title {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+.radio-section {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radio-item [type="radio"] {
+    display: none;
+}
+.radio-item + .radio-item {
+    margin-top: 15px;
+}
+.radio-item label {
+    display: inline-block;
+    padding: 20px 60px;
+    border: 2px solid #053B50;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    min-width: 50px;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.4s ease-in-out 0s;
+}
+.radio-item label:after,
+.radio-item label:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+.radio-item label:after {
+    height: 19px;
+    width: 19px;
+    border: 2px solid #053B50;
+    left: 19px;
+    top: calc(50% - 12px);
+}
+.radio-item label:before {
+    background: #053B50;
+    height: 20px;
+    width: 20px;
+    left: 21px;
+    top: calc(50%-5px);
+    transform: scale(5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+    border-color: #053B50;
+}
+.radio-item [type="radio"]:checked ~ label::before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.submit-button {
+    height: 50px;
+    width: 250px;
+    border: none;
+    outline: none;
+    background: #053B50;
+    color: #ffffff;
+    font-size: 20px;
+    transition-duration: 3s;
+    transition: ease-in;
+    margin-bottom: 20px;
+
+}
+.submit-button:hover {
+    background: #043038;
+    box-shadow: 0 5px 5px #4baaa9;
+}
+
+.submit-button:active {
+    background: #043038;
+}
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.error-message {
+    font-size: 14px;
+    color: #952323;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+}
+
+.book {
+    height: 300px;
+    width: 180px;
+    background-color: #83CBE4;
+    border-radius: 0 20px 20px 0;
+
+    padding: 20px 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: inset 30px 0px 5px 0px #053B50;
+
+}
+
+.book-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+

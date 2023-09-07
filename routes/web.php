@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\OrderController::class, 'show'])->name('order.show');
+
+Route::post('order', [\App\Http\Controllers\OrderController::class, 'submit'])->name('order.submit');
