@@ -28,10 +28,10 @@ class OrderController extends Controller
                 'min:2',
                 // Only letters and space is allowed
                 'regex:/^[a-zA-Z\s]+$/',
-                // Should not contain the word 'and
+                // Should not contain the word 'and'
                 'not_regex:/\b[Aa][Nn][Dd]\b/'
             ],
-            'gender' => Rule::in(['male', 'female'])
+            'gender' => ['required', Rule::in(['male', 'female'])]
         ],
             [
                 'name.regex' => 'The name can only contain letters.',
@@ -40,10 +40,10 @@ class OrderController extends Controller
         );
 
         return view('order-success',
-        [
-            'name' => $data['name'],
-            'gender' => $data['gender'] == 'male' ? 'Boy' : 'Girl',
-        ]);
+            [
+                'name' => $data['name'],
+                'gender' => $data['gender'] == 'male' ? 'Boy' : 'Girl',
+            ]);
     }
 
 }

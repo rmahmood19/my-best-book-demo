@@ -9,7 +9,12 @@
                 {{$message}}
                 @enderror
             </div>
-            <input type="text" name="name" class="input-box">
+            <input type="text" name="name" placeholder="eg. Reaz" class="input-box">
+        </div>
+        <div class="error-message">
+            @error('gender')
+            {{$message}}
+            @enderror
         </div>
         <section class="radio-section">
             <div class="radio-list">
